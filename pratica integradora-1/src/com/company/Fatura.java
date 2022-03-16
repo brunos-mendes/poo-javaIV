@@ -13,8 +13,9 @@ public class Fatura {
     }
 
     public void addItem(Item item) {
+        BigDecimal subtotal = item.getValor().multiply(BigDecimal.valueOf(item.getQtd()));
         this.itens.add(item);
-        this.total.add(item.getValor().multiply(BigDecimal.valueOf(item.getQtd())));
+        this.total = this.total.add(subtotal);
     }
 
     @Override

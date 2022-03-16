@@ -30,4 +30,14 @@ public class Item {
         this.qtd = qtd;
         Valor = valor;
     }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "codigo='" + codigo + '\'' +
+                ", nome='" + nome + '\'' +
+                ", qtd=" + qtd +
+                ", Valor=" + Valor +
+                '}';
+    }
 }
